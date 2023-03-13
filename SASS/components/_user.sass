@@ -1,0 +1,92 @@
+.user
+    display: grid
+    grid-template-columns: minmax(290px, 690px) 270px
+    align-items: center
+    &__desk
+        list-style: none
+        margin: 25px 0
+        padding-right: 15px
+        border-right: 1px solid #d4d4d4
+    &__btn
+        justify-self: end
+        button
+            font-size: 21px
+            line-height: 1.2
+            font-weight: 700
+            color: rgb(255, 255, 255)
+            width: 190px
+            margin-left: auto
+            padding: 12px 0
+            border: none
+            display: block
+            cursor: pointer
+            border-radius: 5px
+            background: linear-gradient(90deg, rgb(202, 0, 81) 0%, rgb(223, 4, 92) 100%)
+            box-shadow: 0px 3px 0px 0px rgba(148, 0, 59, 0.004)
+
+
+.profile
+    display: grid
+    grid-template-columns: 135px 1fr
+    grid-column-gap: 20px
+    align-items: center
+    &__info
+        p
+            margin: 12px 0
+    &__img
+        a
+            display: block
+            border: 5px
+            box-shadow: 0px 0px 4px 1px rgba(0, 0, 0, .22)
+        img
+            display: block
+            padding: 5px
+            max-width: 100%
+            box-sizing: border-box
+    &__name
+        font-size: 20px
+        text-transform: uppercase
+        font-weight: 500
+        line-height: 1.2
+        color: rgb(64, 64, 64)
+    &__desc
+        color: rgb(112, 112, 112)
+        font-size: 13px
+        line-height: 1.2
+        max-width: 420px
+    &__btns
+        display: grid
+        grid-template-columns: repeat(auto-fit, minmax(140px, auto))
+        justify-content: start
+        button
+            color: rgb(202, 0, 81)
+            font-size: 15px
+            line-height: 1.2
+            padding: 8px 0
+            background-color: rgb(242, 238, 238)
+            border: 1px solid #d4d4d4
+            cursor: pointer
+
+
+@media (max-width:  750px)
+    
+    .user
+        grid-template-columns: auto
+    
+    .user__desk
+        padding-right: 0
+        border-right: none
+    
+    .user__btn
+        justify-self: center
+        margin-bottom: 25px
+
+
+@media (max-width:  480px)
+
+    .profile__img
+        grid-column: span 2
+        justify-self: center
+
+    .profile__info
+        grid-column: span 2

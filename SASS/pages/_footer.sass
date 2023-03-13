@@ -1,0 +1,45 @@
+.footer
+    border-top: 2px solid #ababab
+    margin-top: -2px
+    display: grid
+    grid-template-columns: 1fr 1fr
+    grid-column-gap: 20px
+    &__menu
+        display: grid
+        grid-template-columns: repeat(auto-fit, minmax(50px, auto))
+        margin: 25px 0
+        list-style: none
+        justify-content: start
+        a
+            font-size: 13px
+            line-height: 1.2
+            color: rgb(97, 97, 97)
+            text-decoration: none
+            font-weight: 600
+        li
+            border-right: 1px solid #d4d4d4
+            padding: 0 10px
+            &:first-child
+                padding-left: 0
+            &:last-child
+                border: none
+            
+    &__right
+        text-align: right
+    p
+        font-size: 13px
+        line-height: 1.2
+        color: rgb(97, 97, 97)
+        margin: 25px 0
+
+
+@media (max-width:  680px)
+
+    .footer
+        grid-template-columns: auto
+
+    .footer__menu
+        justify-content: stretch
+
+    .footer__left, .footer__right
+        text-align: center
